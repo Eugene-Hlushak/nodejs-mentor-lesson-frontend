@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nodejs-mentor-lesson-frontend/static/css/main.0d5b2924.css",
+    "main.js": "/nodejs-mentor-lesson-frontend/static/js/main.bd336972.js",
+    "index.html": "/nodejs-mentor-lesson-frontend/index.html",
+    "main.0d5b2924.css.map": "/nodejs-mentor-lesson-frontend/static/css/main.0d5b2924.css.map",
+    "main.bd336972.js.map": "/nodejs-mentor-lesson-frontend/static/js/main.bd336972.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0d5b2924.css",
+    "static/js/main.bd336972.js"
+  ]
+}
