@@ -6,7 +6,8 @@ import { deleteContact } from 'redux/contacts/contactsOperations';
 import { ContactItem, Contact, DeleteBtn } from './ContactList.styled';
 import EditContact from '../EditContact/EditContact';
 
-export default function ContactListItem({ contact: { name, number, id } }) {
+export default function ContactListItem({ contact: { name, number, _id } }) {
+  console.log(name, number, _id);
   const [showModal, setShowModal] = useState(false);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -39,13 +40,13 @@ export default function ContactListItem({ contact: { name, number, id } }) {
         <p>
           {name}: {number}
         </p>
-        <DeleteBtn onClick={() => dispatch(deleteContact(id))}>
+        <DeleteBtn onClick={() => dispatch(deleteContact(_id))}>
           <GoTrashcan size={20} color={'black'} />
         </DeleteBtn>
       </Contact>
       {showModal && (
         <EditContact
-          contactId={id}
+          contactId={_id}
           currentName={name}
           currentNumber={number}
           clickOnBackdrop={handleBackdropClick}

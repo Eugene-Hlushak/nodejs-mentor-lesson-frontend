@@ -8,6 +8,7 @@ import { Routes, Route } from 'react-router-dom';
 import { userRefresh } from 'redux/auth/authOperations';
 import { selectIsRefresh } from 'redux/auth/authSelectors';
 import SharedLayout from './SharedLayout/SharedLayout';
+import UserInfo from './UserInfo/UserInfo';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ export const App = () => {
           <Route index element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/contacts" element={<Contacts />} />
+          <Route path="/user" element={<UserInfo/>} />
         </Route>
       </Routes>
     )
