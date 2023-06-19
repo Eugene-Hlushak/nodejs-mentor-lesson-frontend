@@ -15,6 +15,7 @@ export default function EditContact({
   currentNumber,
   clickOnBackdrop,
 }) {
+  console.log(contactId);
   const [name, setName] = useState(currentName);
   const [number, setNumber] = useState(currentNumber);
   const dispatch = useDispatch();

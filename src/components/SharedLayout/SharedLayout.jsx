@@ -36,9 +36,13 @@ const SharedLayout = () => {
             ) : (
               <LinkBox>
                 {user.name && <User>Welcome, {user.name}</User>}
+                <Link to="/user" sx={{ mr: '10px' }}>
+                  User info
+                </Link>
                 <Link to="/contacts" sx={{ mr: '10px' }}>
                   Contacts
                 </Link>
+
                 <LogoutBtn
                   variant="outlined"
                   type="submit"
