@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Register from 'pages/Register';
+import UserInfo from 'pages/UserInfo';
 import { Routes, Route } from 'react-router-dom';
 import { userRefresh } from 'redux/auth/authOperations';
 import { selectIsRefresh } from 'redux/auth/authSelectors';
@@ -24,6 +25,7 @@ export const App = () => {
           <Route index element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/contacts" element={<Contacts />} />
+          <Route path="/user" element={<UserInfo />} />
         </Route>
       </Routes>
     )

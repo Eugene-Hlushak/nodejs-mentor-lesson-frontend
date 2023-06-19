@@ -29,7 +29,7 @@ export default function ContactList() {
         </LoaderContainer>
       ) : (
         visibleContacts.map(contact => (
-          <ContactListItem contact={contact} key={contact.id} />
+          <ContactListItem contact={contact} key={contact._id} />
         ))
       )}
     </ListContainer>

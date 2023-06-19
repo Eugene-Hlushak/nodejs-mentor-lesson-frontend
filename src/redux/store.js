@@ -16,7 +16,7 @@ import {
 } from 'redux-persist';
 
 const persistConfig = {
-  key: 'hw-08-phonebook',
+  key: 'nodejs-mentor-lesson',
   storage,
   whitelist: ['token'],
 };
@@ -26,8 +26,6 @@ const rootReducer = combineReducers({
   contacts: contactsReducer,
   filter: filterReducer,
 });
-
-// const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
   reducer: rootReducer,

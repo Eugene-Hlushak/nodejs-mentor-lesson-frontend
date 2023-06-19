@@ -42,19 +42,20 @@ export const contactsFetchSlice = createSlice({
     [addContact.rejected]: errorState,
 
     [deleteContact.pending]: pendingState,
-    [deleteContact.fulfilled](state, { payload }) {
+    [deleteContact.fulfilled](state, { payload: { result } }) {
       state.itemsIsLoading = false;
       state.error = null;
-      state.items = [...state.items.filter(item => item.id !== payload.id)];
+      state.items = [...state.items.filter(item => item._id !== result._id)];
     },
     [deleteContact.rejected]: errorState,
+
     [editContact.pending]: pendingState,
     [editContact.fulfilled](state, { payload }) {
       state.itemsIsLoading = false;
       state.error = null;
       state.items = [
         ...state.items.map(item =>
-          item.id === payload.id ? { ...item, ...payload } : item
+          item._id === payload._id ? { ...item, ...payload } : item
         ),
       ];
     },
